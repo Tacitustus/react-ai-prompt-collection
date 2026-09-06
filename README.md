@@ -37,7 +37,7 @@ Webアプリ開発のあらゆるフェーズで使える **コピペ即利用�
 
 | ファイル | 内容 |
 |---------|------|
-| [deploy-templates.md](./01_project-templates/deploy-templates.md) | GitHub Pages / Vercel / Netlify / Cloudflare Pages 向けテンプレート |
+| [deploy-templates.md](./01_project-templates/deploy-templates.md) | GitHub Pages / Vercel / Netlify / Cloudflare Pages / Firebase Hosting 向けテンプレート |
 
 ---
 
