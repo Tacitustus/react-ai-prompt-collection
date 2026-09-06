@@ -61,6 +61,8 @@ project-root/
 │   ├── App.tsx
 │   ├── main.tsx
 │   └── vite-env.d.ts
+├── scripts/
+│   └── setup.mjs              # プロジェクト初期化スクリプト
 ├── BLUEPRINT.md               # プロジェクト仕様書（後述）
 ├── .eslintrc.cjs              # ESLint 設定
 ├── .prettierrc                # Prettier 設定
@@ -230,7 +232,13 @@ BLUEPRINT.md にはプロジェクト仕様のテンプレートを記述する�
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ■ その他
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-- README.md にプロジェクトのセットアップ手順、開発コマンド一覧、デプロイ手順を日本語で記述する
+- **プロジェクト初期化スクリプト (`scripts/setup.mjs`)** を作成すること。
+  - 実行時に新しいプロジェクト名を受け取るか入力させ、`package.json` の `name`、`index.html` の `<title>`、および `BLUEPRINT.md` や `README.md` 内のプロジェクト名を自動で一括置換する Node.js スクリプト。
+  - `package.json` の `scripts` に `"setup": "node scripts/setup.mjs"` を追加する。
+- README.md には以下の内容を記述すること：
+  - このリポジトリが **GitHub の Public template リポジトリ** として利用されることを想定している旨。
+  - セットアップ手順（1. `Use this template` でリポジトリ作成 → 2. `git clone` → 3. `npm install` → 4. `npm run setup` でプロジェクト情報の一括更新）。
+  - 開発コマンド一覧、デプロイ手順。
 - .gitignore を適切に設定する（node_modules, dist, .env 等）
 - パスエイリアス（@/ → src/）を vite.config.ts と tsconfig.json の両方で設定する
 
@@ -289,6 +297,8 @@ project-root/
 │   ├── App.tsx
 │   ├── main.tsx
 │   └── vite-env.d.ts
+├── scripts/
+│   └── setup.mjs              # プロジェクト初期化スクリプト
 ├── BLUEPRINT.md               # プロジェクト仕様書
 ├── vercel.json                # Vercel 設定（SPA リライト等）
 ├── .eslintrc.cjs
@@ -470,7 +480,13 @@ vercel.json を作成し、以下を設定すること：
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ■ その他
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-- README.md にプロジェクトのセットアップ手順、開発コマンド一覧、デプロイ手順を日本語で記述する
+- **プロジェクト初期化スクリプト (`scripts/setup.mjs`)** を作成すること。
+  - 実行時に新しいプロジェクト名を受け取るか入力させ、`package.json` の `name`、`index.html` の `<title>`、および `BLUEPRINT.md` や `README.md` 内のプロジェクト名を自動で一括置換する Node.js スクリプト。
+  - `package.json` の `scripts` に `"setup": "node scripts/setup.mjs"` を追加する。
+- README.md には以下の内容を記述すること：
+  - このリポジトリが **GitHub の Public template リポジトリ** として利用されることを想定している旨。
+  - セットアップ手順（1. `Use this template` でリポジトリ作成 → 2. `git clone` → 3. `npm install` → 4. `npm run setup` でプロジェクト情報の一括更新）。
+  - 開発コマンド一覧、デプロイ手順。
 - .gitignore を適切に設定する（node_modules, dist, .env, .vercel 等）
 - パスエイリアス（@/ → src/）を vite.config.ts と tsconfig.json の両方で設定する
 
@@ -529,6 +545,8 @@ project-root/
 │   ├── App.tsx
 │   ├── main.tsx
 │   └── vite-env.d.ts
+├── scripts/
+│   └── setup.mjs              # プロジェクト初期化スクリプト
 ├── BLUEPRINT.md               # プロジェクト仕様書
 ├── netlify.toml               # Netlify 設定
 ├── .eslintrc.cjs
@@ -725,7 +743,13 @@ BLUEPRINT.md にはプロジェクト仕様のテンプレートを記述する�
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ■ その他
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-- README.md にプロジェクトのセットアップ手順、開発コマンド一覧、デプロイ手順を日本語で記述する
+- **プロジェクト初期化スクリプト (`scripts/setup.mjs`)** を作成すること。
+  - 実行時に新しいプロジェクト名を受け取るか入力させ、`package.json` の `name`、`index.html` の `<title>`、および `BLUEPRINT.md` や `README.md` 内のプロジェクト名を自動で一括置換する Node.js スクリプト。
+  - `package.json` の `scripts` に `"setup": "node scripts/setup.mjs"` を追加する。
+- README.md には以下の内容を記述すること：
+  - このリポジトリが **GitHub の Public template リポジトリ** として利用されることを想定している旨。
+  - セットアップ手順（1. `Use this template` でリポジトリ作成 → 2. `git clone` → 3. `npm install` → 4. `npm run setup` でプロジェクト情報の一括更新）。
+  - 開発コマンド一覧、デプロイ手順。
 - .gitignore を適切に設定する（node_modules, dist, .env, .netlify 等）
 - パスエイリアス（@/ → src/）を vite.config.ts と tsconfig.json の両方で設定する
 
@@ -784,6 +808,8 @@ project-root/
 │   ├── App.tsx
 │   ├── main.tsx
 │   └── vite-env.d.ts
+├── scripts/
+│   └── setup.mjs              # プロジェクト初期化スクリプト
 ├── BLUEPRINT.md               # プロジェクト仕様書
 ├── .eslintrc.cjs
 ├── .prettierrc
@@ -981,7 +1007,13 @@ Cloudflare Pages の SPA 対応として、public/_routes.json を作成する�
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ■ その他
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-- README.md にプロジェクトのセットアップ手順、開発コマンド一覧、デプロイ手順を日本語で記述する
+- **プロジェクト初期化スクリプト (`scripts/setup.mjs`)** を作成すること。
+  - 実行時に新しいプロジェクト名を受け取るか入力させ、`package.json` の `name`、`index.html` の `<title>`、および `BLUEPRINT.md` や `README.md` 内のプロジェクト名を自動で一括置換する Node.js スクリプト。
+  - `package.json` の `scripts` に `"setup": "node scripts/setup.mjs"` を追加する。
+- README.md には以下の内容を記述すること：
+  - このリポジトリが **GitHub の Public template リポジトリ** として利用されることを想定している旨。
+  - セットアップ手順（1. `Use this template` でリポジトリ作成 → 2. `git clone` → 3. `npm install` → 4. `npm run setup` でプロジェクト情報の一括更新）。
+  - 開発コマンド一覧、デプロイ手順。
 - .gitignore を適切に設定する（node_modules, dist, .env, .wrangler 等）
 - パスエイリアス（@/ → src/）を vite.config.ts と tsconfig.json の両方で設定する
 
@@ -1041,6 +1073,8 @@ project-root/
 │   ├── App.tsx
 │   ├── main.tsx
 │   └── vite-env.d.ts
+├── scripts/
+│   └── setup.mjs              # プロジェクト初期化スクリプト
 ├── BLUEPRINT.md               # プロジェクト仕様書
 ├── firebase.json              # Firebase Hosting 設定
 ├── .firebaserc                # Firebase プロジェクトID紐付け設定
@@ -1260,7 +1294,13 @@ README.md には以下の2通りのセットアップ方法を併記すること
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ■ その他
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-- README.md にプロジェクトのセットアップ手順、開発コマンド一覧、デプロイ手順を日本語で記述する
+- **プロジェクト初期化スクリプト (`scripts/setup.mjs`)** を作成すること。
+  - 実行時に新しいプロジェクト名を受け取るか入力させ、`package.json` の `name`、`index.html` の `<title>`、および `BLUEPRINT.md` や `README.md` 内のプロジェクト名を自動で一括置換する Node.js スクリプト。
+  - `package.json` の `scripts` に `"setup": "node scripts/setup.mjs"` を追加する。
+- README.md には以下の内容を記述すること：
+  - このリポジトリが **GitHub の Public template リポジトリ** として利用されることを想定している旨。
+  - セットアップ手順（1. `Use this template` でリポジトリ作成 → 2. `git clone` → 3. `npm install` → 4. `npm run setup` でプロジェクト情報の一括更新）。
+  - 開発コマンド一覧、デプロイ手順。
 - .gitignore を適切に設定する（node_modules, dist, .env, .firebase 等）
 - パスエイリアス（@/ → src/）を vite.config.ts と tsconfig.json の両方で設定する
 
